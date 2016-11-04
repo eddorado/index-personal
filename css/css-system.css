@@ -1,0 +1,292 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%;}
+nav{width: 960px; height: 55px !important; margin: 0 auto; } 
+a{ color: #4D4D4D !important;  font-family: sans-serif; text-transform: uppercase; text-decoration: none; line-height: 42px; }
+.text:hover{ transform: scale(1.1); transition-duration: 1s; }
+.text{ letter-spacing: 3px; background:transparent;}
+.textPresentation{ font-family: 'Droid Serif', serif; letter-spacing: 3px;}
+.titlePresentation {  } 
+
+/**** Loader ***/
+#contentLoader{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+}
+
+#loader{
+	text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15%; 
+}
+
+
+/******************Inicio***********************/
+#navMenu li a{
+	color: #999 !important;
+}
+
+.active{
+    text-decoration: none;
+    color: #fff !important;
+    background: rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+#navMenu li a:active,
+#navMenu li a:hover {
+    text-decoration: none;
+    color: #fff !important;
+    background: rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+.presentation-content{ text-align: center; width: 33.33333333%; margin: 0 auto; display: block; padding-top: 10%;} 
+.general-content{ text-align: center; width: 33.33333333%; margin: 0 auto; padding-top: 15%; display: block; } 
+.navbar-defaults{background-color: #212121; border-color: transparent; margin-bottom: 0px; position: fixed; width: 100%; border-radius: 0px; z-index: 5
+	; height: 60px; top: 0; padding-left: 30px; padding-right: 30px}
+
+
+/******************  Inicio Image *************************/
+.presentation-content > .list-group-item{ background-color: transparent !important; border: transparent !important; }
+.presentation { position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 99; -webkit-filter: blur(10px); filter: blur(10px); } 
+.img-circle-presentation{ border-radius: 50%; width: 140px; height: 140px;}
+.imgPresentation{ width: 250px; height: 250px;
+	transition:width .2s;
+    -moz-transition:width .2s; /* Firefox 4 */
+    -webkit-transition:width .2s; /* Safari and Chrome */
+    -o-transition:width .2s; /* Opera */
+}
+#textPresentation{
+	transition:width .5s;
+    -moz-transition:width .5s; /* Firefox 4 */
+    -webkit-transition:width .5s; /* Safari and Chrome */
+    -o-transition:width .5s; /* Opera */
+}
+
+/******************  Contenido *************************/
+#container{ width:85%; padding: auto; margin: auto; display: block;}
+#acerca{padding-top: 60px; }
+#blog{ background-color: #fff  }
+#portafolio{ background-color: green; }
+#contactame{ background-color: red; }
+/******************  Menu Inicio *************************/
+/* Side Menu */
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px !important;
+    height: 100% !important;
+    transform: translateX(250px);
+    overflow-y: auto;
+    /*background: #222;*/
+    background: #212121;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff !important;
+    background: rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff !important;
+    background: none;
+}
+
+#menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+
+/* Custom Button Styles */
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff !important;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Footer */
+footer {
+    padding: 100px 0;
+}
+
+#to-top {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+#sidebar-nav > li a:hover{
+	color: white !important;
+}
+
+/*------------------    Transformations      ------------------------------*/
+.imgTransformActive {
+	-webkit-animation: transformImage .6s infinite; 
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards; 
+	animation: transformImage .6s infinite;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-moz-animation: transformImage .6s infinite;
+    -o-animation: transformImage .6s infinite;
+}
+
+.imgTransform {
+	-webkit-animation: transformImageDesactive .6s infinite; 
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation: transformImageDesactive .6s infinite;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-moz-animation: transformImageDesactive .6s infinite;
+    -o-animation: transformImageDesactive .6s infinite;
+}
+
+/* animations to tranform image */
+@-webkit-keyframes transformImageDesactive{from { width: 140px; height: 140px; border-radius: 50%;} to { width: 250px; height: 250px; border-radius: 0% } } 
+@-webkit-keyframes transformImage{from { width: 250px; height: 250px; border-radius: 0%;} to { height: 140px; width: 140px; border-radius: 50% } } 
+@-moz-keyframes transformImageDesactive{from { width: 140px; height: 140px; border-radius: 50%;} to { width: 250px; height: 250px; border-radius: 0% } } 
+@-moz-keyframes transformImage{from { width: 250px; height: 250px; border-radius: 0%;} to { height: 140px; width: 140px; border-radius: 50% } } 
+@-o-keyframes transformImageDesactive{from { width: 140px; height: 140px; border-radius: 50%;} to { width: 250px; height: 250px; border-radius: 0% } } 
+@-o-keyframes transformImage{from { width: 250px; height: 250px; border-radius: 0%;} to { height: 140px; width: 140px; border-radius: 50% } } 
+@keyframes transformImageDesactive{from { width: 140px; height: 140px; border-radius: 50%;} to { width: 250px; height: 250px; border-radius: 0% } } 
+@keyframes transformImage{from { width: 250px; height: 250px; border-radius: 0%;} to { height: 140px; width: 140px; border-radius: 50% } }
+ 
+
+/************ Panel *********/
+.panel-contenido{
+/*	
+    box-shadow: 5px 5px 5px #4d4d4d;
+*/
+}
+
+.panel-contenido:hover{
+	background-color: #efefef;
+}
+
+
+
+
+.img-circle-acerca{ border-radius: 50%; width: 200px; height: 200px;}
+
+
+
+
+/*
+
+
+    border-radius: 2px;
+    border: 0;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+
+
+*/
+
+
+
+
+
+/*BLUR*/
+#imageportafolio {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+#imageportafolio:hover {
+  -webkit-filter: blur(5px);
+}
+
+
+
+
+
+

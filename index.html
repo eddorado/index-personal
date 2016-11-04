@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edgar Dorado Camacho</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="<?php echo base_url();?>"/>
+	<!-- Mobile support -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Material Design fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	  <!-- Bootstrap Material Design -->
+    <link href="css/bootstrap-material-design.css" rel="stylesheet"/>
+    <link href="css/ripples.min.css" rel="stylesheet"/>
+	  <!-- jQuery -->
+	<script src="js/jquery.min.js"></script><style type="text/css"></style>
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link href="css/css-system.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Romanesco" rel="stylesheet">
+</head>
+<body>
+
+	<div class="row" style="display:none">
+		<div class="navbar navbar-defaults navbar-fixed-top" style="background-color:transparent !important">
+			<div id="menu-toggle" class="btn btn-dark btn-lg toggle" 
+			style="padding-left: 15px; padding-right:15px">
+				<i class="material-icons" style="font-size:30px;">view_headline</i>
+			</div>
+		    <nav id="sidebar-wrapper">
+		        <ul class="sidebar-nav" style="height:100%">
+		            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"
+		            style="padding-left: 15px; padding-right:15px">
+		            <i class="material-icons" style="font-size:30px">clear</i></a>
+		            <li class="sidebar-brand">
+		                <a href="#home" class="h4" style="font-size:20px; padding-top: 8px;" 
+		                onclick=$("#menu-close").click();> <strong>Edgar Dorado</strong></a>
+		            </li>
+		            <li>
+		                <a href="#" onclick=$("#menu-close").click();>Inicio</a>
+		            </li>
+		            <li>
+		                <a href="#" id="cargarAcerca" onclick=$("#menu-close").click();>Acerca</a>  
+		            </li>
+		            <li>
+		                <a href="#" id="cargarBlog" onclick=$("#menu-close").click();>Blog</a>
+		            </li>
+		            <li>
+		                <a href="#" id="cargarPortafolio" onclick=$("#menu-close").click();>Portafolio</a>
+		            </li>
+		            <li>
+		                <a href="#" id="cargarContactame" onclick=$("#menu-close").click();>Contactame</a>
+		            </li>
+		            <li style="bottom: 0; left: 0; position: absolute;">
+		        		<p class="text-muted pull-left h6">Copyright &copy; Edgar Dorado</p>
+		            </li>
+		        </ul>
+		    </nav>
+		</div>
+	</div>
+
+	<div class="principal-home">
+		<div id="home">
+			<div class="presentation-content" style="margin-top:0%">
+				<div class="list-group-item">
+				    <div class="row-picture" id="imgPresentation" mostrar="0">
+				      	<img class="imgPresentation" src="img/dorado.jpg" alt="icon" data-toggle="tooltip" data-placement="bottom" style=" box-shadow: 5px 5px 5px #4d4d4d;" title="Edgar Dorado Camacho">
+				    </div>
+				    <div class="row-content hidden" id="textPresentation">
+				    	<br>
+				      	<h3 class="list-group-item-heading" style="font-family: 'Josefin Slab', serif;">Edgar Dorado</h4>
+				      	<h5 class="list-group-item-text" style="text-align : center; font-family: 'Droid Sans', sans-serif;">
+				      		Licenciado en informática y desarrollador de software de profesión, interesado en el
+							crecimiento personal y profesional, buscando las herramientas necesarias para fortalecer
+							mis habilidades. Estoy abierto a nuevas ideas y a compartir aprendizaje;
+							En busca de mentores y equipo de trabajo intencionados a obtener buenos resultados.
+				      	</p>
+				    </div>
+				</div>
+	        </div>
+		</div>
+		<div class="footer" style="margin-top: -100px">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-10 col-lg-offset-1 text-center">
+	                    <hr class="small">
+	                    <h4><p class="text-muted pull-left" style="font-family: 'Romanesco', cursive;">Copyright &copy; Edgar Dorado</p></h4>
+	                </div>
+	            </div>
+	        </div>
+		</div>		
+	</div>
+	<!-- Twitter Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Material Design for Bootstrap -->
+	<script type="text/javascript" src="js/material.js"></script>
+	<script type="text/javascript" src="js/ripples.min.js"></script>
+	<!-- Mustache -->
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript">
+	//Tamaño de secciones
+	function asignarAltura(){ altura = $(window).height(); $('#home').css({'height': altura}); }
+	//animacion de Imagen
+	$('#imgPresentation').click(function(){
+		//Desactivando
+		if($('#imgPresentation').attr('mostrar')  == 1){
+			$('#imgPresentation').attr('mostrar', 0);
+			$('.imgPresentation').removeClass('imgTransformActive');
+			$('.imgPresentation').addClass('imgTransform');
+			$('#textPresentation').addClass('hidden');
+		}else{
+		//Activando
+			$('#imgPresentation').attr('mostrar', 1);
+			$('.imgPresentation').removeClass('imgTransform');
+			$('.imgPresentation').addClass('imgTransformActive');
+			$('#textPresentation').removeClass('hidden');
+		}
+	});
+
+	//cargar paginas
+	$('#cargarAcerca').click( function(){
+		window.location.replace('<?= base_url() ?>index.php/Home/Acerca/#acerca');
+	});
+	$('#cargarBlog').click( function(){
+		window.location.replace('<?= base_url() ?>index.php/Home/Blog/#blog');
+	});
+	$('#cargarPortafolio').click( function(){
+		window.location.replace('<?= base_url() ?>index.php/Home/Portafolio/#portafolio');
+	});
+	$('#cargarContactame').click( function(){
+		window.location.replace('<?= base_url() ?>index.php/Home/Contactame/#contactame');
+	});
+
+	$('#home').click(function(){
+		$("#sidebar-wrapper").removeClass("active");
+	});
+
+	/**animations of side-bar**/
+	// Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    //http://loading.io/loader/?key=57c6786714bec87611e02357
+    /*-------------------*/
+
+  	$(document).ready(function(){ asignarAltura(); });
+  </script>
+</body>
+</html>
